@@ -10,6 +10,13 @@
                 padding: 0;
                 box-sizing: border-box;
             }
+            .wrapper {
+                max-width: 2230px; /* Set the maximum width */
+                margin: 0 auto; /* Center the content */
+              
+                background-color: #D3E6F0; /* Same background color */
+            }
+
             body{
                 background-color:#D3E6F0;
             }
@@ -160,15 +167,39 @@
 
             /* Second rectangle */
             .rectangle1 {
-                width: 5000px;
-                height: 83px;
-                background-color: #1E3F66;
-                margin: 20px 0;
+             width: 100vw; /* 100% of the viewport width */
+            height: 83px;
+            background-color: #1E3F66;
+            position: relative; /* Ensures it stays in place */
+            left: 0; /* Prevents shifting */
+            margin: 20px 0;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
             }
+
+            body {
+            overflow-x: hidden; /* Disables horizontal scrolling */
+            }
+            
+            .carcontainer, .carcontainer2 {
+            display: flex; /* Aligns boxes in a row */
+            gap: 10px; /* Space between boxes */
+            justify-content: center; /* Centers the boxes */
+            max-width: 2195px; /* Prevents it from being too wide */
+            margin: 0 auto; /* Centers it */
+            margin-bottom: 15px;
+            }
+
+        /* Fix carbox spacing */
+            .carbox1, .carbox2, .carbox3 {
+            width: 730px;
+            height: 770px;
+            background-color: white;
+            /* Remove margin-left to prevent extra space */
+             }
         </style>
     </head>
 <body>
-
+    <div class="wrapper">
     <!-- Search bar with an icon and a button -->
     <div class="container">
         <img src="Images/Search 02.png" class="img-size" alt="Search Icon">
@@ -194,8 +225,20 @@
     </div>
 
     <!-- Second rectangle -->
-    <div class="rectangle1"></div>
-    
+     <div class="rectangle1"></div>
+   
+
+    <div class="carcontainer">
+        <div class="carbox1"></div>
+        <div class="carbox2"></div>
+        <div class="carbox3"></div>
+    </div>
+    <div class="carcontainer2">
+        <div class="carbox1"></div>
+        <div class="carbox2"></div>
+        <div class="carbox3"></div>
+    </div>
+    <div>
 </body>
 </html>
 
